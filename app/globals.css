@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-brand: #2563eb;
+  --color-brand-dark: #1e40af;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+body {
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(37, 99, 235, 0.12), transparent),
+    radial-gradient(900px 500px at -10% 110%, rgba(16, 185, 129, 0.1), transparent),
+    #eef2f7;
+  color: #0f172a;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark body {
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(37, 99, 235, 0.18), transparent),
+    radial-gradient(900px 500px at -10% 110%, rgba(16, 185, 129, 0.16), transparent),
+    #0b1120;
+  color: #e2e8f0;
+}
